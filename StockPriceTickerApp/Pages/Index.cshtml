@@ -1,0 +1,61 @@
+﻿@page
+@model IndexModel
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-C8..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<h2> Live Stock Prices(This is a demo. Kindly be aware that actual stock prices differ from the prices displayed)</h2>
+
+<table border="1" cellpadding="8">
+    <thead>
+        <tr>
+            <th>Stock</th>
+            <th>Code</th>
+            <th>Price ($)</th>
+            <th>Changes ($)</th>
+            <th>Changes (%)</th>
+        </tr>
+    </thead>
+    <tbody id="stockTable"></tbody>
+</table>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/8.0.0/signalr.min.js"></script>
+
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/stockHub")
+        .build();
+
+    connection.on("ReceiveStockUpdate", function (stocks) {
+        console.log("Stock Response", stocks);
+        const table = document.getElementById("stockTable");
+        table.innerHTML = "";
+
+        stocks.forEach(stock => {
+
+            let arrowHtml = '';
+             switch(stock.indicator) 
+                 {
+                case 1: //Increase
+                    arrowHtml = `<i class="fas fa-arrow-up" style="color:green;"></i>`;
+                    break;
+                case 2: // Decrease
+                    arrowHtml = `<i class="fas fa-arrow-down" style="color:red;"></i>`;
+                    break;
+                case 3: // No change
+                default:
+                    arrowHtml = ''; 
+                    break;
+                }
+
+        table.innerHTML += `
+            <tr>
+                <td>${stock.name}</td>
+                <td>${stock.code}</td>
+                <td>${stock.price.toFixed(2)}$ ${arrowHtml}</td>
+                <td>${stock.dailyPriceAvg.toFixed(2)}$</td>
+                <td>${stock.dailyPercentageAvg }%</td>
+            </tr>`;
+    });
+    });
+
+    connection.start().catch(err => console.error(err));
+</script>
+

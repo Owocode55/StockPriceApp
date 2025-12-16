@@ -1,0 +1,33 @@
+[
+  {
+    "Name": "NVIDIA Corp.",
+    "Code": "NVDA",
+    "Price": 350.00
+  },
+  {
+    "Name": "Apple Inc",
+    "Code": "AAPL",
+    "Price": 100.00
+  },
+  {
+    "Name": "Alphabet Inc. (Google)",
+    "Code": "GOOG",
+    "Price": 400.00
+  },
+
+  {
+    "Name": "Microsoft Corp.",
+    "Code": "MSFT",
+    "Price": 220.00
+  },
+  {
+    "Name": "Amazon.com Inc",
+    "Code": "AMZN",
+    "Price": 200.00
+  },
+  {
+    "Name": "Tesla Inc.",
+    "Code": "TSLA",
+    "Price": 60.00
+  }
+]

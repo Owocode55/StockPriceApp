@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36401.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPriceTickerApp", "StockPriceTickerApp\StockPriceTickerApp.csproj", "{6E0488A6-EBFB-48A9-8D4F-EAA744C616A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPriceTickerTest", "StockPriceTickerTest\StockPriceTickerTest.csproj", "{2EFAF9BC-D93D-44C0-A252-14FE362D037E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6E0488A6-EBFB-48A9-8D4F-EAA744C616A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0488A6-EBFB-48A9-8D4F-EAA744C616A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0488A6-EBFB-48A9-8D4F-EAA744C616A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0488A6-EBFB-48A9-8D4F-EAA744C616A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFAF9BC-D93D-44C0-A252-14FE362D037E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFAF9BC-D93D-44C0-A252-14FE362D037E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFAF9BC-D93D-44C0-A252-14FE362D037E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFAF9BC-D93D-44C0-A252-14FE362D037E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3F57F107-9662-4876-A774-ED538ED1F42E}
+	EndGlobalSection
+EndGlobal
